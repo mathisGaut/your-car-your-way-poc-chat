@@ -1,0 +1,87 @@
+.page {
+  width: min(720px, 100%);
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #d6d6d6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.status {
+  margin: 0.25rem 0 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.user-switch {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.user-switch select,
+.composer input,
+.composer button {
+  font: inherit;
+}
+
+.messages {
+  flex: 1;
+  padding: 1rem 1.25rem;
+  overflow-y: auto;
+}
+
+.message {
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+}
+
+.time {
+  margin-left: 0.5rem;
+  color: #777;
+  font-size: 0.8rem;
+}
+
+.error {
+  margin: 0;
+  padding: 0.5rem 1.25rem;
+  color: #8a1f1f;
+  background: #f8eaea;
+}
+
+.composer {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem 1.25rem;
+  border-top: 1px solid #d6d6d6;
+}
+
+.composer input {
+  flex: 1;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #bdbdbd;
+}
+
+.composer button {
+  padding: 0.6rem 1rem;
+  border: 1px solid #1f4b73;
+  background: #1f4b73;
+  color: #fff;
+  cursor: pointer;
+}
