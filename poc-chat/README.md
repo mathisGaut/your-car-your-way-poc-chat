@@ -39,6 +39,8 @@ Modèle minimal, cohérent avec le diagramme d’entité-relation :
 
 Aucune inscription, réservation, paiement ou gestion de véhicule n’est implémentée.
 
+Le schéma de la base est créé par les migrations Laravel (`backend/database/migrations`). Au premier `docker compose up --build`, `php artisan migrate` et le seeder de démo sont exécutés. Un script SQL équivalent, déjà seedé, est aussi fourni pour lecture ou import manuel : [`database/schema.sql`](database/schema.sql).
+
 ## Lancer le projet
 
 Prérequis : Docker et Docker Compose.
