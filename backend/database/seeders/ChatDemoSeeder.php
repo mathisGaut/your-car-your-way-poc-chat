@@ -52,6 +52,8 @@ class ChatDemoSeeder extends Seeder
             'content' => 'Bonjour, comment allez-vous ?',
             'sent_at' => now()->subMinute(),
         ]);
+
+        $this->syncPostgresSequences();
     }
 
     private function resetDemoTables(): void
@@ -71,5 +73,18 @@ class ChatDemoSeeder extends Seeder
         }
 
         Schema::enableForeignKeyConstraints();
+    }
+
+    private function syncPostgresSequences(): void
+    {
+        if (DB::getDriverName() !== 'pgsql') {
+            return;
+        }
+
+        foreach (['users', 'conversations', 'conversation_user', 'messages'] as $table) {
+            DB::statement(
+                "SELECT setval(pg_get_serial_sequence('{$table}', 'id'), COALESCE((SELECT MAX(id) FROM {$table}), 1))"
+            );
+        }
     }
 }
