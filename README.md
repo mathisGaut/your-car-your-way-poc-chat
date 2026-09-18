@@ -46,7 +46,6 @@ Le schéma de la base est créé par les migrations Laravel (`backend/database/m
 Prérequis : Docker et Docker Compose.
 
 ```bash
-cd poc-chat
 docker compose up --build
 ```
 
