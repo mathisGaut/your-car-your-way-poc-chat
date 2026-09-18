@@ -1,0 +1,11 @@
+/vendor
+/node_modules
+/storage/logs
+/storage/framework/cache
+/storage/framework/sessions
+/storage/framework/views
+.env
+/database/database.sqlite
+.git
+.idea
+.DS_Store

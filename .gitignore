@@ -1,0 +1,8 @@
+# Documentation locale (hors dépôt GitHub)
+Docs/
+
+# macOS
+.DS_Store
+
+# Sauvegardes Draw.io
+*.bkp
